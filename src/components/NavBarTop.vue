@@ -15,12 +15,12 @@
             <router-link to="/structure" class="button" active-class="button-active">Структура</router-link>
         </nav>
         <span class="button material-symbols-outlined" active-class="button-active"
-            @click="this.showExtra = !this.showExtra" style="margin-left:auto" v-else>
+            @click="this.showExtra = !this.showExtra" disabled="this.showExtra" style="margin-left:auto; font-size: 4vh;" v-else>
             menu
         </span>
     </div>
-    <div class="extra" v-if="this.showExtra && this.mobile">
-        <div class="extra-layout">
+    <div class="extra" v-if="this.showExtra && this.mobile" v-click-outside="() => this.showExtra = !this.showExtra">
+        <div class="extra-layout" >
             <router-link to="/" class="button-extra" active-class="button-active">
                 <span>63-я отчётно-выборная<br>конференция
                 </span>
