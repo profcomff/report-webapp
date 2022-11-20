@@ -6,7 +6,7 @@
                 Профком студентов<br>физического факультета
             </span>
         </div>
-        <nav v-if="!this.isMobile()">
+        <nav v-if="!this.mobile">
             <router-link to="/" class="button" active-class="button-active">
                 <span>63-я отчётно-выборная<br>конференция
                 </span>
@@ -31,6 +31,7 @@
     </div>
 </template>
 <script>
+
 export default {
 
     data() {
@@ -44,13 +45,19 @@ export default {
             if (
                 /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
                     navigator.userAgent
-                ) || document.documentElement.clientWidth < document.documentElement.clientHeight
+                ) || document.documentElement.clientWidth < document.documentElement.clientHeight * 1.15
             ) {
                 return true;
             } else {
                 return false;
             }
         },
+    },
+    created(){
+        this.mobile = this.isMobile()
+        window.addEventListener('resize' , () => {
+            this.mobile = this.isMobile()
+        })
     }
 
 }
