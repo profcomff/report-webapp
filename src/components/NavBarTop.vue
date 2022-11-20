@@ -1,17 +1,17 @@
 <template>
     <div class="layout" ref='foo'>
         <img src="../assets/logo.png" alt="" class="noselect">
-        <div class='name' style="display:inline-block">
+        <a href="https://profcomff.com" class='name' style="display:inline-block">
             <span>
                 Профком студентов<br>физического факультета
             </span>
-        </div>
+        </a>
         <nav v-if="!this.mobile">
             <router-link to="/" class="button" active-class="button-active">
                 <span>63-я отчётно-выборная<br>конференция
                 </span>
             </router-link>
-            <a href="https://app.profcomff.com/apps" class="button" active-class="button-active">Приложение</a>
+            <a href="https://app.profcomff.com/apps" class="button" active-class="button-active" target="blank">Приложение</a>
             <router-link to="/structure" class="button" active-class="button-active">Структура</router-link>
         </nav>
         <span class="button material-symbols-outlined" active-class="button-active"
