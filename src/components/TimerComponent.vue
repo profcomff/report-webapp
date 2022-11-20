@@ -1,5 +1,5 @@
 <template>
-  <div id="timer" class="timer col">
+  <div id="timer" class="timer col noselect">
     <div class="timer-section">
       <div class="days-block">
         <span class="days">00</span>

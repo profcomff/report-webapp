@@ -1,6 +1,6 @@
 <template>
     <div class="layout">
-        <img src="../assets/logo.png" alt="">
+        <img src="../assets/logo.png" alt="" class="noselect">
         <div class='name' style="display:inline-block">
             <span>
                 Профком студентов<br>физического факультета
@@ -61,7 +61,8 @@ div {
 }
 
 img {
-    height: 50px;
+    height: 38px;
+    padding: 7px;
     width: auto;
 }
 
