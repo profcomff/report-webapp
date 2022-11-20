@@ -35,7 +35,7 @@ export default {
   name: 'TimerComponent',
   data() {
     return {
-      endtime: 'Dec 2 2022, 00:00 GMT+0400',
+      endtime: 'Dec 2 2022, 17:30 GMT+0400',
       timer: null,
     }
 
