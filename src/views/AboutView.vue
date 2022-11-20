@@ -35,7 +35,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1em;
+  padding-bottom: 10vh;
   justify-content: space-evenly;
   min-height: 90vh;
 }

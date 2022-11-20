@@ -20,8 +20,7 @@
   position: fixed;
   top: 0px;
   left: 0px;
-  bottom: 0px;
-  right: 0px;
+  height: 110vh;
   z-index: -1;
   overflow-y: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
