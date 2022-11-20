@@ -1,30 +1,37 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <navbar></navbar>
+  <div class="pages">
+    <router-view/>
+  </div>
 </template>
 
+<script>
+  import NavBarTop from "./components/NavBarTop.vue";
+  export default{
+    components:{
+      navbar: NavBarTop
+    }
+  }
+</script>
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  font-family: 'Montserrat', sans-serif;
+  background: radial-gradient(at 100% 100%, #45204b 20%, #03014C 70%);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  z-index: -1;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  scroll-behavior: smooth;
 }
-
-nav {
-  padding: 30px;
+#app::-webkit-scrollbar {
+  display: none;
 }
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+.pages {
+  margin-top: 56px;
 }
 </style>
