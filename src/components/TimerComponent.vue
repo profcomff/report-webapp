@@ -235,7 +235,7 @@ export default {
 .hours,
 .minutes,
 .seconds {
-  font-size: 55px;
+  font-size: 4.5em;
   color: #00004b;
   font-weight: 600;
   margin: 0 auto;
@@ -246,7 +246,7 @@ export default {
 .uncorrectHours,
 .uncorrectMinutes,
 .uncorrectSeconds {
-  font-size: 18px;
+  font-size: 1.5 em;
   font-family: 'Montserrat', sans-serif;
   color: #FF8B00;
 }
@@ -260,8 +260,8 @@ export default {
   margin: 10px;
   padding: 5px;
   border-radius: 10px;
-  width: 70px;
-  height: 70px;
+  width: 15vh;
+  height: 15vh;
   display: flex;
   align-items: center;
 }
@@ -272,6 +272,6 @@ export default {
 
 .timer-text {
   display: block;
-  font-size: 12px;
+  font-size: 1.5em;
 }
 </style>
