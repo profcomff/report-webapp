@@ -235,7 +235,7 @@ export default {
 .hours,
 .minutes,
 .seconds {
-  font-size: 4.5em;
+  font-size: 10vh;
   color: #00004b;
   font-weight: 600;
   margin: 0 auto;
@@ -257,9 +257,9 @@ export default {
 .minutes-block,
 .seconds-block {
   background: #FF8B00;
-  margin: 10px;
-  padding: 5px;
-  border-radius: 10px;
+  margin: 1.5vh;
+  padding: 0.8vh;
+  border-radius: 3vh;
   width: 15vh;
   height: 15vh;
   display: flex;
@@ -272,6 +272,6 @@ export default {
 
 .timer-text {
   display: block;
-  font-size: 1.5em;
+  font-size: 4vh;
 }
 </style>

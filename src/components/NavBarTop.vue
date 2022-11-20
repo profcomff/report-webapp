@@ -61,8 +61,8 @@ div {
 }
 
 img {
-    height: 38px;
-    padding: 7px;
+    height: 6vh;
+    padding: 1vh;
     width: auto;
 }
 
@@ -76,7 +76,7 @@ nav {
     display: block;
     z-index: 2;
     position: fixed;
-    top: 58px;
+    top: 8vh;
     right: 0px;
     left: 0px;
     border-bottom: 2px solid #FF8B00;
@@ -90,15 +90,15 @@ nav {
 .name {
     color: white;
     font-weight: 200;
-    font-size: 0.9em;
-    line-height: 56px;
+    font-size: 2vh;
+    line-height: 8vh;
     text-transform: uppercase;
     justify-self: center;
     vertical-align: middle;
 }
 
 .layout {
-    height: 56px;
+    height: 8vh;
     display: flex;
     flex-direction: row;
     position: fixed;
@@ -110,20 +110,20 @@ nav {
 
 .button {
     border-left: 2px solid #FF8B00;
-    padding: 10px 2rem;
-    height: 37px;
-    line-height: 37px;
-    font-size: 16px;
+    padding: 1.4vh 4vh;
+    height: 5.5vh;
+    line-height: 5.5vh;
+    font-size: 2vh;
     color: white;
     text-decoration: none;
     text-align: center;
     font-weight: 600;
 }
 .button-extra {
-    padding: 10px 2rem;
-    height: 37px;
-    line-height: 37px;
-    font-size: 16px;
+    padding: 1.4vh 4vh;
+    height: 5.5vh;
+    line-height: 5.5vh;
+    font-size: 2vh;
     color: white;
     text-decoration: none;
     text-align: center;
@@ -139,7 +139,7 @@ nav {
 span {
     display: inline-block;
     vertical-align: middle;
-    line-height: 18px;
+    line-height: 2.5vh;
     /* <-- adjust this */
 }
 </style>>

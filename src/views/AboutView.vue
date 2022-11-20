@@ -7,7 +7,7 @@
     <a href="#report" style="text-decoration: underline; text-align: center;">Ознакомиться<br>с повесткой</a>
   </div>
   <div class="layout" id="report" style="padding-top: 66px;">
-    <span  style="color:#ff8b00; font-size: 3em; font-weight: 700;">Повестка</span>
+    <span  style="color:#ff8b00; font-size: 7vh; font-weight: 700;">Повестка</span>
     <ul>
       <li>Отчет Профкома студентов</li>
       <li >Отчет контрольно-ревизионной комиссии Профкома студентов</li>
@@ -44,14 +44,14 @@ span {
   text-transform: uppercase;
   color: white;
   text-align: center;
-  font-size: 2em;
+  font-size: 4.6vh;
   flex: 2 2 2;
 }
 
 a {
   text-transform: uppercase;
   color: white;
-  font-size: 1.2em;
+  font-size: 3vh;
   flex: 2 2 2;
 }
 ul{
@@ -61,7 +61,7 @@ ul{
 }
 li{
   color: white;
-  font-size: 1.1em;
+  font-size: 2.5vh;
   font-weight: 400;
   list-style-type: decimal;
   width: 90%;
