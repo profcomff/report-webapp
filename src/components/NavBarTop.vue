@@ -1,5 +1,5 @@
 <template>
-    <div class="layout">
+    <div class="layout" ref='foo'>
         <img src="../assets/logo.png" alt="" class="noselect">
         <div class='name' style="display:inline-block">
             <span>
@@ -19,7 +19,7 @@
             menu
         </span>
     </div>
-    <div class="extra" v-if="this.showExtra && this.isMobile()">
+    <div class="extra" v-if="this.showExtra && this.mobile">
         <div class="extra-layout">
             <router-link to="/" class="button-extra" active-class="button-active">
                 <span>63-я отчётно-выборная<br>конференция
@@ -31,11 +31,12 @@
     </div>
 </template>
 <script>
-
 export default {
+
     data() {
         return {
             showExtra: false,
+            mobile: true,
         }
     },
     methods: {
@@ -43,7 +44,7 @@ export default {
             if (
                 /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
                     navigator.userAgent
-                )
+                ) || document.documentElement.clientWidth < document.documentElement.clientHeight
             ) {
                 return true;
             } else {
@@ -104,7 +105,7 @@ nav {
     position: fixed;
     top: 0px;
     left: 0px;
-    right: 0px;
+    width:100%;
     border-bottom: 2px solid #FF8B00;
 }
 
