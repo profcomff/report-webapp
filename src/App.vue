@@ -30,11 +30,9 @@
 #app::-webkit-scrollbar {
   display: none;
 }
-body{
-	background: radial-gradient(at 100% 100%, #45204b 20%, #03014C 70%);
-}
 .pages {
   margin-top: 8vh;
+	background: radial-gradient(at 100% 100%, #45204b 20%, #03014C 70%);
 }
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
