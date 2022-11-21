@@ -16,12 +16,11 @@
 <style>
 #app {
   font-family: 'Montserrat', sans-serif;
-  background: radial-gradient(at 100% 100%, #45204b 20%, #03014C 70%);
   position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
-  height: 110vh;
+  bottom: 0px;
   z-index: -1;
   overflow-y: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
@@ -33,6 +32,7 @@
 }
 .pages {
   margin-top: 56px;
+  background: radial-gradient(at 100% 100%, #45204b 20%, #03014C 70%);
 }
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
