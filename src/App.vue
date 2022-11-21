@@ -34,7 +34,7 @@ body{
 	background: radial-gradient(at 100% 100%, #45204b 20%, #03014C 70%);
 }
 .pages {
-  margin-top: 56px;
+  margin-top: 8vh;
 }
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
