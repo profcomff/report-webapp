@@ -19,6 +19,9 @@ import scolarship from '@/assets/texts/scolarship.txt'
 import social from '@/assets/texts/social.txt'
 import student from '@/assets/texts/student.txt'
 import useful from '@/assets/texts/useful.txt'
+import law from '@/assets/texts/law.txt'
+import unk from '@/assets/texts/unk.txt'
+import kmk from '@/assets/texts/kmk.txt'
 export default {
   name: 'AboutView',
   components: {
@@ -65,6 +68,27 @@ export default {
           text: useful.split('\n'),
           folder: 'useful',
           num_of_slides: 5,
+        },
+        {
+          name: 'Правовая комиссия',
+          short_name: 'Правовая',
+          text: law.split('\n'),
+          folder: 'law',
+          num_of_slides: 6,
+        },
+        {
+          name: 'Учебно-научная комиссия',
+          short_name: 'Учебно-научная',
+          text: unk.split('\n'),
+          folder: 'unk',
+          num_of_slides: 6,
+        },
+        {
+          name: 'Культурно-массовая комиссия',
+          short_name: 'Культ.масс',
+          text: kmk.split('\n'),
+          folder: 'kmk',
+          num_of_slides: 10,
         }
       ]
     }
