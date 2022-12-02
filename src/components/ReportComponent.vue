@@ -39,14 +39,14 @@ export default {
 
 h1 {
     color: #ff8b00;
-    font-size: 4vh;
+    font-size: 3.5vh;
     font-weight: 700;
     text-align: center;
 }
 
 p {
     color: white;
-    font-size: 2.5vh;
+    font-size: 2vh;
     font-weight: 400;
     width: 90%;
     text-align: justify;
@@ -54,10 +54,12 @@ p {
 }
 
 .carousel__viewport{
-    width: 90%;
+    width: 100%;
 }
 .carousel__item {
+    height: auto;
     width: 90%;
+    max-width: 720px;
     border-radius: 8px;
     display: flex;
     justify-content: center;
