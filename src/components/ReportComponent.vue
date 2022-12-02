@@ -6,19 +6,23 @@
             <slide v-for="slide in this.report.num_of_slides" :key="slide">
                 <img class="carousel__item" :src="require(`@/assets/slides/${this.report.folder}/${slide}.png`)" alt="">
             </slide>
+            <template #addons>
+                <navigation />
+            </template>
         </carousel>
     </div>
 </template>
 
 <script>
 import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide } from 'vue3-carousel'
+import { Carousel, Slide, Navigation } from 'vue3-carousel'
 
 export default {
     props: ['report'],
     components: {
         Carousel,
         Slide,
+        Navigation
     }
 }
 </script>
@@ -67,5 +71,11 @@ p {
 
 .carousel__slide {
     padding: 2vh;
+}
+.carousel__prev,
+.carousel__next {
+    color: white;
+    box-sizing: content-box;
+    border: 5px solid white;
 }
 </style>

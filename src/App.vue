@@ -23,6 +23,7 @@
   height: 100%;
   z-index: -1;
   overflow-y: scroll;
+  --vc-nav-color: white;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
   scroll-behavior: smooth;
