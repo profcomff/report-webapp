@@ -25,6 +25,10 @@ import kmk from '@/assets/texts/kmk.txt'
 import sport from '@/assets/texts/sport.txt'
 import media from '@/assets/texts/media.txt'
 import drive from '@/assets/texts/drive.txt'
+import socpartner from '@/assets/texts/socpartner.txt'
+import design from '@/assets/texts/design.txt'
+import tech from '@/assets/texts/tech.txt'
+import itgroup from '@/assets/texts/itgroup.txt'
 export default {
   name: 'AboutView',
   components: {
@@ -113,6 +117,34 @@ export default {
           text: drive.split('\n'),
           folder: 'drive',
           num_of_slides: 4,
+        },
+        {
+          name: 'Комиссия по социальному партнерству',
+          short_name: 'Соц.партнёрство',
+          text: socpartner.split('\n'),
+          folder: 'socpartner',
+          num_of_slides: 3,
+        },
+        {
+          name: 'Группа дизайна',
+          short_name: 'Дизайн',
+          text: design.split('\n'),
+          folder: 'design',
+          num_of_slides: 5,
+        },
+        {
+          name: 'Группа техники',
+          short_name: 'Техника',
+          text: tech.split('\n'),
+          folder: 'tech',
+          num_of_slides: 4,
+        },
+        {
+          name: 'IT-группа',
+          short_name: 'Программисты',
+          text: itgroup.split('\n'),
+          folder: 'itgroup',
+          num_of_slides: 6,
         }
       ]
     }
