@@ -113,6 +113,7 @@ nav {
     top: 0px;
     left: 0px;
     width:100%;
+    z-index: 2;
     border-bottom: 2px solid #FF8B00;
 }
 

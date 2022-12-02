@@ -55,12 +55,14 @@ p {
 
 .carousel__viewport{
     width: 100%;
+    z-index: 1;
 }
 .carousel__item {
     height: auto;
     width: 90%;
     max-width: 720px;
     border-radius: 8px;
+    border: 2px solid white;
     display: flex;
     justify-content: center;
     align-items: center;

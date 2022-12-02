@@ -1,28 +1,54 @@
 <template>
-  <OrderComponent v-if="this.enddate > this.date"/>
-  <ReportComponent :report="this.reports[0]" v-else />
+  <OrderComponent v-if="this.enddate > this.date" />
+  <div v-else>
+    <ReportComponent id="report" :report="this.reports[index]" />
+    <div class="layout">
+      <span style="color:#ff8b00; font-size: 7vh; font-weight: 700;">Все отчёты</span>
+      <ul>
+        <li v-for="(report, index) in this.reports" :key="index"><a href="#report" @click="this.index = index">{{report.short_name}}</a></li>
+      </ul>
+    </div>
+  </div>
 </template>
 
 <script>
 import OrderComponent from '@/components/OrderComponent.vue'
 import ReportComponent from '@/components/ReportComponent.vue'
 import common from '@/assets/texts/common.txt'
+import scolarship from '@/assets/texts/scolarship.txt'
+import social from '@/assets/texts/social.txt'
 export default {
   name: 'AboutView',
   components: {
     OrderComponent,
     ReportComponent
   },
-  data(){
-    return{
+  data() {
+    return {
       date: new Date(),
       enddate: new Date('Dec 2 2022, 01:00 GMT+0300'),
-      reports:[
+      index: 0,
+      reports: [
         {
           name: 'Отчет о работе Профкома студентов Физического факультета МГУ имени М.В. Ломоносова  за ноябрь 2021 г. – ноябрь 2022 г.',
+          short_name: 'Общие дела',
           text: common.split('\n'),
           folder: 'common',
           num_of_slides: 6,
+        },
+        {
+          name: 'Студенческая стипендиальная комиссия',
+          short_name: 'Студенческая стипендиальная комиссия',
+          text: scolarship.split('\n'),
+          folder: 'scolarship',
+          num_of_slides: 8,
+        },
+        {
+          name: 'Социальная комиссия',
+          short_name: 'Социальная комиссия',
+          text: social.split('\n'),
+          folder: 'social',
+          num_of_slides: 9,
         }
       ]
     }
@@ -30,5 +56,38 @@ export default {
 }
 </script>
 <style scoped>
+.layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 90vw;
+  margin: auto;
+  padding: 5vh;
+}
 
+span {
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  font-size: 4.6vh;
+  flex: 2 2 2;
+}
+a {
+  color: white;
+  font-size: 2.5vh;
+  font-weight: 400;
+  width: 90%;
+  text-decoration: underline;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh
+}
+
+li {
+  color: white;
+  list-style-type: decimal;
+}
 </style>
