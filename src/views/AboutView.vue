@@ -22,6 +22,9 @@ import useful from '@/assets/texts/useful.txt'
 import law from '@/assets/texts/law.txt'
 import unk from '@/assets/texts/unk.txt'
 import kmk from '@/assets/texts/kmk.txt'
+import sport from '@/assets/texts/sport.txt'
+import media from '@/assets/texts/media.txt'
+import drive from '@/assets/texts/drive.txt'
 export default {
   name: 'AboutView',
   components: {
@@ -89,6 +92,27 @@ export default {
           text: kmk.split('\n'),
           folder: 'kmk',
           num_of_slides: 10,
+        },
+        {
+          name: 'Спортивная комиссия',
+          short_name: 'Спортивная',
+          text: sport.split('\n'),
+          folder: 'sport',
+          num_of_slides: 9,
+        },
+        {
+          name: 'Группа Медиа',
+          short_name: 'Медиа',
+          text: media.split('\n'),
+          folder: 'media',
+          num_of_slides: 9,
+        },
+        {
+          name: 'Группа выездных мероприятий и школ актива',
+          short_name: 'Выездные',
+          text: drive.split('\n'),
+          folder: 'drive',
+          num_of_slides: 4,
         }
       ]
     }
