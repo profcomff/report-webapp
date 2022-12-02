@@ -20,19 +20,19 @@
   top: 0px;
   left: 0px;
   right: 0px;
-  bottom: 0px;
+  height: 100%;
   z-index: -1;
   overflow-y: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
   scroll-behavior: smooth;
+  background: radial-gradient(at 100% 100%, #45204b 20%, #03014C 70%);
 }
 #app::-webkit-scrollbar {
   display: none;
 }
 .pages {
   margin-top: 8vh;
-	background: radial-gradient(at 100% 100%, #45204b 20%, #03014C 70%);
 }
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */

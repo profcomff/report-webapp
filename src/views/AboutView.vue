@@ -1,69 +1,34 @@
 <template>
-  <div class="layout">
-    <span>До конференции осталось</span>
-    <div class="home">
-      <TimerComponent />
-    </div>
-    <a href="#report" style="text-decoration: underline; text-align: center;">Ознакомиться<br>с повесткой</a>
-  </div>
-  <div class="layout" id="report" style="padding-top: 66px;">
-    <span  style="color:#ff8b00; font-size: 7vh; font-weight: 700;">Повестка</span>
-    <ul>
-      <li>Отчет Профкома студентов</li>
-      <li >Отчет контрольно-ревизионной комиссии Профкома студентов</li>
-      <li>Выборы председателя Профкома студентов</li>
-      <li >Выборы членов Профкома студентов</li>
-      <li>Выборы контрольно-ревизионной комиссии Профкома студентов</li>
-      <li >Выборы делегатов на Профсоюзную конференцию Профкома МГУ</li>
-      <li>Разное</li>
-    </ul>
-  </div>
+  <OrderComponent v-if="this.enddate > this.date"/>
+  <ReportComponent :report="this.reports[0]" v-else />
 </template>
 
 <script>
-import TimerComponent from '@/components/TimerComponent.vue'
-
+import OrderComponent from '@/components/OrderComponent.vue'
+import ReportComponent from '@/components/ReportComponent.vue'
+import common from '@/assets/texts/common.txt'
 export default {
-  name: 'HomeView',
+  name: 'AboutView',
   components: {
-    TimerComponent
+    OrderComponent,
+    ReportComponent
+  },
+  data(){
+    return{
+      date: new Date(),
+      enddate: new Date('Dec 2 2022, 01:00 GMT+0300'),
+      reports:[
+        {
+          name: 'Отчет о работе Профкома студентов Физического факультета МГУ имени М.В. Ломоносова  за ноябрь 2021 г. – ноябрь 2022 г.',
+          text: common.split('\r\n'),
+          folder: 'common',
+          num_of_slides: 6,
+        }
+      ]
+    }
   }
 }
 </script>
 <style scoped>
-.layout {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  min-height: 90vh;
-}
 
-span {
-  text-transform: uppercase;
-  color: white;
-  text-align: center;
-  font-size: 4.6vh;
-  flex: 2 2 2;
-}
-
-a {
-  text-transform: uppercase;
-  color: white;
-  font-size: 3vh;
-  flex: 2 2 2;
-}
-ul{
-  display: flex;
-  flex-direction: column;
-  gap: 5vh
-}
-li{
-  color: white;
-  font-size: 2.5vh;
-  font-weight: 400;
-  list-style-type: decimal;
-  width: 90%;
-
-}
 </style>

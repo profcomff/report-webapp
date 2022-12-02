@@ -35,7 +35,7 @@ export default {
   name: 'TimerComponent',
   data() {
     return {
-      endtime: 'Dec 2 2022, 17:30 GMT+0400',
+      endtime: 'Dec 2 2022, 17:30 GMT+0300',
       timer: null,
     }
 
@@ -49,6 +49,7 @@ export default {
         minutes = document.querySelector('.minutes'),
         seconds = document.querySelector('.seconds');
       // обновление таймера каждые 1000мс
+      update()
       this.timer = setInterval(update, 1000);
 
       function makeCorrectDate(uncorrectDate) {
