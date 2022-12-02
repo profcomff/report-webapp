@@ -3,7 +3,7 @@
   <div v-else>
     <ReportComponent id="report" :report="this.reports[index]" />
     <div class="layout">
-      <span style="color:#ff8b00; font-size: 7vh; font-weight: 700;">Все отчёты</span>
+      <span style="color:#ff8b00; font-size: 5vh; font-weight: 700;">Все отчёты</span>
       <ul>
         <li v-for="(report, index) in this.reports" :key="index"><a href="#report" @click="this.index = index">{{report.short_name}}</a></li>
       </ul>
@@ -17,6 +17,8 @@ import ReportComponent from '@/components/ReportComponent.vue'
 import common from '@/assets/texts/common.txt'
 import scolarship from '@/assets/texts/scolarship.txt'
 import social from '@/assets/texts/social.txt'
+import student from '@/assets/texts/student.txt'
+import useful from '@/assets/texts/useful.txt'
 export default {
   name: 'AboutView',
   components: {
@@ -49,6 +51,20 @@ export default {
           text: social.split('\n'),
           folder: 'social',
           num_of_slides: 9,
+        },
+        {
+          name: 'Комиссия по работе со студентами и абитуриентами',
+          short_name: 'Студенты и абитуриенты',
+          text: student.split('\n'),
+          folder: 'student',
+          num_of_slides: 8,
+        },
+        {
+          name: 'Комиссия по общественно полезным делам',
+          short_name: 'Общественно полезная',
+          text: useful.split('\n'),
+          folder: 'useful',
+          num_of_slides: 5,
         }
       ]
     }
