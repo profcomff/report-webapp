@@ -19,9 +19,6 @@ export default {
     components: {
         Carousel,
         Slide,
-    },
-    mounted() {
-        console.log(this.report.text)
     }
 }
 </script>

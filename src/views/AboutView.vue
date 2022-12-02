@@ -1,7 +1,7 @@
 <template>
   <OrderComponent v-if="this.enddate > this.date" />
   <div v-else>
-    <ReportComponent id="report" :report="this.reports[index]" />
+    <ReportComponent id="report" :report="this.reports[this.index]" :key="this.index" />
     <div class="layout">
       <span style="color:#ff8b00; font-size: 5vh; font-weight: 700;">Все отчёты</span>
       <ul>
@@ -38,7 +38,7 @@ export default {
   data() {
     return {
       date: new Date(),
-      enddate: new Date('Dec 2 2022, 01:00 GMT+0300'),
+      enddate: new Date('Dec 2 2022, 17:30 GMT+0300'),
       index: 0,
       reports: [
         {
@@ -92,7 +92,7 @@ export default {
         },
         {
           name: 'Культурно-массовая комиссия',
-          short_name: 'Культ.масс',
+          short_name: 'Культурно-массовая',
           text: kmk.split('\n'),
           folder: 'kmk',
           num_of_slides: 10,
