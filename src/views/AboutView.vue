@@ -20,7 +20,7 @@ export default {
       reports:[
         {
           name: 'Отчет о работе Профкома студентов Физического факультета МГУ имени М.В. Ломоносова  за ноябрь 2021 г. – ноябрь 2022 г.',
-          text: common.split('\r\n'),
+          text: common.split('\n'),
           folder: 'common',
           num_of_slides: 6,
         }
