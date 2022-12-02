@@ -7,7 +7,7 @@
                 <img class="carousel__item" :src="require(`@/assets/slides/${this.report.folder}/${slide}.png`)" alt="">
             </slide>
             <template #addons>
-                <navigation />
+                <navigation class="addon"/>
             </template>
         </carousel>
     </div>
@@ -40,7 +40,7 @@ export default {
 
 h1 {
     color: #ff8b00;
-    font-size: 3.5vh;
+    font-size: 3vh;
     font-weight: 700;
     text-align: center;
 }
@@ -60,7 +60,7 @@ p {
 }
 .carousel__item {
     height: auto;
-    width: 90%;
+    width: 80%;
     max-width: 720px;
     border-radius: 8px;
     border: 2px solid white;
@@ -72,10 +72,7 @@ p {
 .carousel__slide {
     padding: 2vh;
 }
-.carousel__prev,
-.carousel__next {
-    color: white;
-    box-sizing: content-box;
-    border: 5px solid white;
+.addon{
+    margin:0px;
 }
 </style>

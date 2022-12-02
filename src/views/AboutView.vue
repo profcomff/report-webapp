@@ -38,7 +38,7 @@ export default {
   data() {
     return {
       date: new Date(),
-      enddate: new Date('Dec 2 2022, 17:30 GMT+0300'),
+      enddate: new Date('Dec 2 2022, 15:30 GMT+0300'),
       index: 0,
       reports: [
         {
